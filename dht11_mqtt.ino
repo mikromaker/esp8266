@@ -105,6 +105,7 @@ void setup() {
 //  timeClient.begin();
   Serial.begin(9600);
   Serial.setTimeout(2000);
+  Serial.println("Welcome to Mikro Maker Youtube Channel!");
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   // Wait for serial to initialize.
