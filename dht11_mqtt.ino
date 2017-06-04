@@ -15,8 +15,8 @@
 
 DHT dht(DHTPIN, DHTTYPE);
 const char* mqtt_server = "test.mosquitto.org";
-const char* ssid = "NetMASTER Uydunet-92DC";
-const char* password = "d3c50c51";
+const char* ssid = "**********";
+const char* password = "******";
 int timeSinceLastRead = 0;
 unsigned char versiontimer = 200;
 char mqtt_address[256];
@@ -47,9 +47,7 @@ void setup_wifi() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   WiFi.macAddress(mac);
-  sprintf(mqtt_address,"test/%2X%2X%2X%2X%2X%2X",mac[0],mac[1],mac[2],mac[3],mac[4],mac[5]);
-  Serial.println(mqtt_address);
-  
+  sprintf(mqtt_address,"test/%2X%2X%2X%2X%2X%2X",mac[0],mac[1],mac[2],mac[3],mac[4],mac[5]); 
 }
 
 void reconnect() {
